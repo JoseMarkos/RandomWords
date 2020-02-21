@@ -8,9 +8,10 @@ namespace TextoRandom
     {
         public string[] Sentences =
         {
-            "There is a class called 'Circuitos Electricos I'",
+            "There is a class called 'Filosofia de Mises'",
             "John does not work at a hospital",
-            "Now the variable can be used"
+            "Now the variable can be used",
+            "The party is over"
         };
 
         public string GetASentence(int index)

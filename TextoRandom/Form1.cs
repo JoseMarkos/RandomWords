@@ -8,11 +8,12 @@ namespace TextoRandom
     {
         public int finalSentenceWidth = 21;
         public int locationX = 0;
+        
         private static Utils utils = new Utils();
-
-        // We can change it to random sentence. The second node is for now.
-
-        private static string[] sentenceSplit = utils.GetASplitedSentence(2);
+        
+        private static int random = new Random().Next(utils.Sentences.Length);
+        public int MyProperty { get; set; }
+        private static string[] sentenceSplit = utils.GetASplitedSentence(random);
         private string[] userAnswer = new string[sentenceSplit.Length];
         private int counter = 0;
 
