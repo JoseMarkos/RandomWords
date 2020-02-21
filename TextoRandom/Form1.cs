@@ -24,6 +24,7 @@ namespace TextoRandom
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            labelInstructions.Text = "Click the text and order the sentence:";
             int[] randomSentenceOrder = utils.GetRandomOrder(sentenceSplit.Length);
 
             locationX = labelInstructions.Location.Y;
@@ -86,7 +87,7 @@ namespace TextoRandom
             Label lbl = sender as Label;
 
             lbl.BackColor = Color.Gray;
-           // lbl.ForeColor = Color.Gray;
+            lbl.ForeColor = Color.Gray;
 
             int index = splitMain.Panel2.Controls.IndexOf(lbl);
 
@@ -96,8 +97,6 @@ namespace TextoRandom
 
             userAnswer[counter] = lbl.Text;
             counter++;
-
-            CheckAnswer(ref userAnswer);
         }
 
         protected void RemoveLabel(object sender, EventArgs e)
@@ -141,6 +140,12 @@ namespace TextoRandom
         protected void ShowWinMessage()
         {
             labelInstructions.Text = "Great Job!!";
+            labelInstructions.ForeColor = Color.Green;
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            CheckAnswer(ref userAnswer);
         }
     }
 }

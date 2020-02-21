@@ -31,6 +31,7 @@
             this.labelInstructions = new System.Windows.Forms.Label();
             this.splitMain = new System.Windows.Forms.SplitContainer();
             this.splitDisplay = new System.Windows.Forms.SplitContainer();
+            this.btnCheck = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
             this.splitMain.Panel1.SuspendLayout();
             this.splitMain.SuspendLayout();
@@ -71,10 +72,21 @@
             // 
             // splitDisplay.Panel1
             // 
+            this.splitDisplay.Panel1.Controls.Add(this.btnCheck);
             this.splitDisplay.Panel1.Controls.Add(this.labelInstructions);
             this.splitDisplay.Size = new System.Drawing.Size(633, 181);
             this.splitDisplay.SplitterDistance = 90;
             this.splitDisplay.TabIndex = 2;
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.Location = new System.Drawing.Point(534, 55);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(75, 23);
+            this.btnCheck.TabIndex = 2;
+            this.btnCheck.Text = "Check";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // Form1
             // 
@@ -102,6 +114,7 @@
         private System.Windows.Forms.Label labelInstructions;
         private System.Windows.Forms.SplitContainer splitMain;
         private System.Windows.Forms.SplitContainer splitDisplay;
+        private System.Windows.Forms.Button btnCheck;
     }
 }
 
