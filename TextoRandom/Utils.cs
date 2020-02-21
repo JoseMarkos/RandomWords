@@ -51,7 +51,6 @@ namespace TextoRandom
                 if (disorder.Contains(ind))
                 {
                     int newIndex = random.Next(max);
-                    //MessageBox.Show(newIndex.ToString() + " index");
 
                     AsignIndex(j, newIndex, max);
                 }
